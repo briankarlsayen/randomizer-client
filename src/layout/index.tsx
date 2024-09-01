@@ -4,12 +4,11 @@ import "./index.css";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import NoMatch from "../pages/NoMatch";
-// import Spinner from "../assets/chick-spinner.gif";
 
 function Layout() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [authErr, setAuthErr] = useState(false);
+  const [loading, _setLoading] = useState(false);
+  const [error, _setError] = useState(false);
+  const [authErr, _setAuthErr] = useState(false);
 
   const fetchDatas = async () => {};
 
@@ -32,7 +31,6 @@ function Layout() {
             alignItems="center"
           >
             <Box textAlign="center">
-              {/* <img src={Spinner} alt="loading-icon" /> */}
               <Typography variant="h6">Loading files, please wait</Typography>
             </Box>
           </Box>

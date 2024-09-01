@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { cardsStore } from "../../../store/CardStore";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
-  Icon,
   IconButton,
   TextField,
   Tooltip,

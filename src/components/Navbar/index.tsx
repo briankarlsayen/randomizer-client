@@ -8,9 +8,7 @@ import {
   IconButton,
   Tooltip,
 } from "@mui/material";
-import { Logout, Settings } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-// // import Logo from "../../assets/logox64.png";
 import AddIcon from "@mui/icons-material/Add";
 import { createCard as createCardApi } from "../../api/api";
 import { checkStatusCode } from "../../utils";
@@ -21,7 +19,6 @@ const Navbar = () => {
   const handleLogoClick = () => navigate("/");
   const handleCreateCard = async () => {
     const response = await createCardApi();
-    console.log("response", response);
     if (!checkStatusCode(response?.status)) return;
 
     const currDate = new Date();
@@ -44,7 +41,6 @@ const Navbar = () => {
     <div>
       <AppBar position="static">
         <DesktopView
-          navigate={navigate}
           handleLogoClick={handleLogoClick}
           handleCreateCard={handleCreateCard}
         />
@@ -53,7 +49,7 @@ const Navbar = () => {
   );
 };
 
-const DesktopView = ({ navigate, handleLogoClick, handleCreateCard }) => {
+const DesktopView = ({ handleLogoClick, handleCreateCard }) => {
   return (
     <Toolbar>
       <Box
@@ -75,14 +71,14 @@ const DesktopView = ({ navigate, handleLogoClick, handleCreateCard }) => {
               </Typography>
             </Box>
           </Box>
-          <LeftNavbar navigate={navigate} handleCreateCard={handleCreateCard} />
+          <LeftNavbar handleCreateCard={handleCreateCard} />
         </Box>
       </Box>
     </Toolbar>
   );
 };
 
-const LeftNavbar = ({ navigate, handleCreateCard }) => {
+const LeftNavbar = ({ handleCreateCard }) => {
   return (
     <Box display="flex">
       <Tooltip title="Add">

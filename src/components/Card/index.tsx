@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import { formatDate } from "../utils";
 
 interface ICard {
   title: string;

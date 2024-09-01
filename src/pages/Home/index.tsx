@@ -1,14 +1,7 @@
 import Card from "../../components/Card";
-import {
-  Box,
-  Grid,
-  InputAdornment,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 import { cardsStore } from "../../store/CardStore";
-import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 function Home() {
   const navigate = useNavigate();

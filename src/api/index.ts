@@ -5,12 +5,6 @@ import { instance } from "./axios";
 interface PostApiResponse extends AxiosResponse {
   message?: string;
   success?: boolean;
-  // data: any;
-}
-
-interface PutApiProps {
-  apiRoute: string;
-  params?: any;
 }
 
 export const routePostApi = async (

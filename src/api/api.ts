@@ -1,4 +1,4 @@
-import { routeDeleteApi, routeGetApi, routePostApi, routeUpdateApi } from ".";
+import { routeDeleteApi, routePostApi, routeUpdateApi } from ".";
 
 // card-items apis
 export const createCardItem = async (params) => {

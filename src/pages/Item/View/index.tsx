@@ -1,12 +1,10 @@
-import React from "react";
 import { cardsStore } from "../../../store/CardStore";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Box, IconButton, Typography } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function View() {
   const { cards } = cardsStore((state) => state);
-  let location = useLocation();
   const navigate = useNavigate();
   const { id } = useParams();
   console.log("params", id);
