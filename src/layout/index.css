@@ -1,0 +1,32 @@
+.navbar-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 16px;
+  text-decoration: none;
+  color: #000; /* Customize the text color */
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* Customize the underline color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-item.selected::after {
+  background-color: #000; /* Customize the underline color for the selected item */
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
